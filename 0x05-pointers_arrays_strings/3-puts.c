@@ -1,13 +1,15 @@
- #include <unistd.h>
-
+#include "main.h"
 /**
- * _putchar - Writes a character to the standard output (stdout)
- * @c: The character to be written
- *
- * Return: On success, returns the character written as an unsigned char cast to an int.
- *         On error, returns -1 and sets errno appropriately.
+ * _puts - prints a string, followed by a new line, to stdout
+ * @str: string to print
  */
-int _putchar(char c)
+void _puts(char *str)
 {
-  return write(1, &c, 1);
+	while (*str != '\0')
+	{
+		_putchar(*str++);
+	}
+		_putchar('\n');
 }
+
+
